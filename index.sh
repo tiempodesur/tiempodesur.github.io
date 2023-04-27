@@ -74,6 +74,17 @@ display: none;
 .mapa { display: block; margin-left: auto;
   margin-right: auto;
   width: 60%;}
+  
+  .Alerta {
+  display: flex;
+  align-items: center; 
+  height: 50px;
+  font-size: 20px;
+  font-weight: normal;
+  color: white;
+  background-color: red;
+  border: 3px solid black;
+  text-indent: 5px
 
 @media only screen and (max-width:600px) {
 
@@ -148,6 +159,14 @@ Tiempo de Sur
  
 
 </div>  
+
+
+  <div class="Alerta">
+  <p> Probables precipitaciones intensas en las
+  pr&oacute;ximas horas</p>
+  </div>
+
+  <br>
 
 
 <div class="header" style="background-color:#C0C0C0;">
