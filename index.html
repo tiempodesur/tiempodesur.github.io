@@ -1,9 +1,21 @@
 <!DOCTYPE html>
 <html>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-52YG5SDG98"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-52YG5SDG98');
+</script>
+
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
+
 
 
 .lugar {
@@ -14,9 +26,21 @@
   text-align: left;
   text-decoration: none;
   display: inline-block;
-  font-size: 20px;
-  font-weight: normal;
+font-size: 20px;
+width: 300px;
+font-weight: normal;
+margin-top: 10px;
+margin-bottom: 15px;
 }
+
+.diario-celu {
+  display: none;
+;}
+
+.diario-compu {
+  display: block;
+;}
+
 
 .cartel {
 font-size:75px;
@@ -61,6 +85,7 @@ div.scrollmenu a:hover {
 display: inline;
 box-sizing: border-box;
 margin: 10px;
+width=100%;
 }
 
 
@@ -75,7 +100,48 @@ display: none;
   margin-right: auto;
   width: 60%;}
 
+
+ .Alerta {
+  display: flex;
+  align-items: center; 
+  height: 60px;
+  font-size: 20px;
+  font-weight: normal;
+  color: white;
+  background-color: red;
+  border: 3px solid black;
+  text-indent: 0px;}
+  
 @media only screen and (max-width:600px) {
+
+.diario-celu {
+  display: block;
+}
+
+.diario-compu {
+  display: none;
+;}
+
+.diario-compu {
+border: 2px solid #000;
+position:relative;
+width:98%;
+visibility: hidden;}
+
+.lugar {
+ background-color: #FFF;
+  border:  2px solid black;
+  color: black;
+  padding: 5px 5px;
+  text-align: left;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+font-weight: normal;
+margin-top: 10px;
+margin-bottom: 15px;
+width: 49%;
+}
 
 .cartel {
 font-size:60px;
@@ -96,7 +162,7 @@ border: 4px solid black;
   width: 95%;}
 
 .img a {
-    display: block;  
+    display: none;  
 }
 
 
@@ -116,7 +182,7 @@ height: 10px;
 
 
 body {
-background-color: white;
+background-color: #F6DDCC;
 }
 
 
@@ -134,78 +200,101 @@ background-color: white;
 </body>
 
 
-<div class="cartel">  
-Tiempo de Sur
-</div>
+<img src="FotoBackground.jpg" alt="Background" width=100%;>
 
 <div>
-
-<h1 class="lugar"> Bariloche, a 800
-  m. s.n.m. 
-
-  </h1>
-
- 
-
-</div>  
-
+  <select onChange="window.location.href=this.value" class="lugar">
+    <option value="index.html" class="lugar">Zona Bariloche</option>
+    <option value="index.html" class="lugar">Pr&oacute;ximamente m&aacute;s opciones</option>      
+</select>
+<select onChange="window.location.href=this.value" class="lugar">
+    <option value="index.html" class="lugar">Los Kil&oacute;metros, 800 m.s.n.m.</option>
+    <option value="index.html" class="lugar">Pr&oacute;ximamente m&aacute;s opciones</option>      
+</select>
+</div>
 
 <div class="header" style="background-color:#C0C0C0;">
          <IMG STYLE="position:relative; TOP:0px; LEFT:0px" width="165"
   SRC="Dia1.png">
 </div>
+<br>
+<div  padding-bottom: 50px;></div>
 
 
 
-<div class="scrollmenu">
-  <p>
-  <img src="panel_Dia1_2.png" id="panel" STYLE="position:relative;
-  TOP:0px; LEFT:10px;  border: 2px solid #000;">      
-  <img src="panel_Dia1_3.png" id="panel" STYLE="position:relative;
-  TOP:0px; LEFT:30px;  border: 2px solid #000;">     
-  <img src="panel_Dia1_4.png" id="panel" STYLE="position:relative;
-  TOP:0px; LEFT:50px; border: 2px solid #000;">
-  </p>
+
+
+
+<div class="diario-celu">
+<img src="panel-celu_Dia1_3.png"
+  id="panel"  style="border: 2px solid #000;  position:relative; TOP:
+  8px; width:98%">
+</div>
+<div class="diario-celu">
+<img src="panel-celu_Dia1_4.png"
+  id="panel"  style="border: 2px solid #000;  position:relative; TOP:
+  16px; width:98%">
 </div>
 
 
+<div class="img">
+  <a href=""><img src="panel_Dia1_3.png" id="panel"
+  style="border: 2px solid #000;  position:relative; TOP:px;"></a>
+    <p class="espacio"></p>
+  <a href=""><img src="panel_Dia1_4.png" id="panel""
+  style="border: 2px solid #000;  position:relative; TOP:px;"></a>
+</div>
 
-
-
-
-
-<body>
-   <button id="show-image-button" style="background-color: LightGray;
-  border:  1px solid black;
-  color: blue;
-  padding: 5px 5px;
-  text-align: left;
-  text-decoration: none;
-  display: inline-block;
-  font-weight: bold;
-  font-size: 18px;">MAPA PRECIPITACIONES</button>
-   <img id="my-image" src="PP_d1.png" class="hidden">
- 
-   <script>
-      const showImageButton = document.getElementById("show-image-button");
-      const myImage = document.getElementById("my-image");
-      showImageButton.addEventListener("click", () => { 
-         myImage.classList.toggle("mapa"); 
-      });
-   </script>
-</body>
 
 <p></p>
 
-<div class="header" style="background-color:#C0C0C0;">
-         <IMG STYLE="position:relative; TOP:0px; LEFT:0px" width="270"
-  SRC="ProximosDias.png">
-</div>
-<p style="font-size:20px; color: red;font-weight: bold; margin-left: 5px; position:relative; TOP:-15px"> &#8680; <i> Para ver el
-         detalle diario, haga clic en el panel correspondiente </p>
+<p></p>
 
-<p>
-</p>
+
+<img class="mapa" src="PP_d1.png" alt="Mapa" style="width=100%; position:
+relative; TOP:16px">
+
+
+
+
+  
+<p></p>
+
+
+
+<div class="header" style="background-color:#C0C0C0; position:relative;
+         TOP:18px">
+         <IMG STYLE="position:relative; TOP:2px; LEFT:0px" width="220"
+  SRC="ProximosDias.png">  
+</div>
+
+<p style="font-size:20px; color: black; margin-left: 5px; position:relative; TOP:0px"> &#8680;  Para ver el
+detalle diario, haga clic en el panel correspondiente </p>
+
+
+<div class="diario-celu">
+<a href="dia2.html"><img src="panel-celu_Dia2.png"
+  id="panel"  style="border: 2px solid #000;  position:relative; TOP: -18px; width:98%"></a>
+</div>
+
+<div class="diario-celu">
+<a href="dia3.html"><img src="panel-celu_Dia3.png" id="panel"
+  style="border: 2px solid #000;  position:relative; TOP: -10px; width:98%"></a>
+</div>
+
+<div class="diario-celu">
+    <a href="dia4.html"><img src="panel-celu_Dia4.png" id="panel"
+  style="border: 2px solid #000;  position:relative; TOP: -2px; width:98%"></a>
+</div>
+
+<div class="diario-celu">  
+    <a href="dia5.html"><img src="panel-celu_Dia5.png" id="panel"
+  style="border: 2px solid #000;  position:relative; TOP:6px; width:98%"></a>
+</div>
+
+
+
+
 
 
 <div class="img">
@@ -222,30 +311,34 @@ Tiempo de Sur
   style="border: 2px solid #000;  position:relative; TOP:-15px;"></a>   
 </div>
 
-<p></p>
 
 
 
-<div style="background-color: #FFFFFF; height: 20px;">
-
-
-  <h1 class="center"> * Actualizaci&oacute;n con datos de las 7h </h1>
+  <h1 class="center"; style="font-size:15px; position: relative; TOP:-15px"> * Actualizaci&oacute;n con datos de las 13h </h1>
 
 <br>
   
-<div style="background-color: #AED6F1;">
-  
-  <p style="font-size:15px; margin-left: 10px;">
+<div style="font-size:12px; margin-left: 10px; text-align: justify;
+  text-justify: inter-word;">
 <br>
   Excepto en el caso de lluvia/nieve y nevisca, los &iacute;conos meteorol&oacute;gicos
-son del paquete "Weather Color" de Sihan Liu 
+son del paquete "Weather Color" de Sihan Liu
   (https://www.sihanliu.com/).  
   En el caso de lluvia/nieve y nevisca, los mismos han sido realizado
-  a partir de &iacute;conos de ese mismo trabajo. </p>
+  a partir de &iacute;conos de ese mismo trabajo.
 <br>
-  
-  
-</div>
+
+    <h2>Descargo de Responsabilidad</h2>
+   
+           La informaci&oacute;n meteorol&oacute;gica presentada en esta
+   p&aacute;gina web tienen fines exclusivamente informativos y no debe
+   considerarse para tomar decisiones significativas. Por lo tanto,
+            no asumimos
+   ninguna responsabilidad por las consecuencias de las acciones
+   tomadas en funci&oacute;n de los pron&oacute;sticos presentados en este sitio.
+   
+
+    </div>
 
 </body>
 

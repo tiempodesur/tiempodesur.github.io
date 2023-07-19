@@ -5,6 +5,25 @@
 
 <style>
 
+.lugar {
+ background-color: #FFF;
+  border:  2px solid black;
+  color: black;
+  padding: 5px 5px;
+  text-align: left;
+  text-decoration: none;
+  display: inline-block;
+font-size: 20px;
+width: 300px;
+font-weight: normal;
+margin-top: 10px;
+margin-bottom: 15px;
+}
+
+.diario-celu {
+  display: none;
+;}
+
 .buttonBg {
   background-color: #D3D3D3;
   border:  2px solid black;
@@ -88,6 +107,26 @@ display: none;
 
 @media only screen and (max-width:600px) {
 
+.diario-celu {
+  display: block;
+}
+
+.lugar {
+ background-color: #FFF;
+  border:  2px solid black;
+  color: black;
+  padding: 5px 5px;
+  text-align: left;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+font-weight: normal;
+margin-top: 10px;
+margin-bottom: 15px;
+width: 49%;
+}
+
+
 .mapa { display: block; margin-left: auto;
   margin-right: auto;
   width: 95%;}
@@ -108,7 +147,7 @@ border: 4px solid black;
 
 
 .img a {
-    display: block;  
+    display: none;  
 }
 
 
@@ -128,8 +167,9 @@ height: 10px;
 
 
 
+
 body {
-background-color: white;
+background-color: #F6DDCC;
 }
 
 
@@ -147,21 +187,24 @@ background-color: white;
 </body>
 
 
-<div class="cartel">  
-Tiempo de Sur
-</div>
+
+
+<img src="FotoBackground.jpg" alt="Background" width=100%;>
 
 <div>
-
-<h1 class="lugar"> Bariloche, a 800
-  m. s.n.m. 
-
-  </h1>
-
+  <select onChange="window.location.href=this.value" class="lugar">
+    <option value="index.html" class="lugar">Zona Bariloche</option>
+    <option value="index.html" class="lugar">Pr&oacute;ximamente m&aacute;s opciones</option>      
+</select>
+<select onChange="window.location.href=this.value" class="lugar">
+    <option value="index.html" class="lugar">Los Kil&oacute;metros, 800 m.</option>
+    <option value="index.html" class="lugar">Pr&oacute;ximamente m&aacute;s opciones</option>      
+</select>
+</div>
 
 
   
-</div>  
+
 
 
 
@@ -170,42 +213,87 @@ Tiempo de Sur
          <IMG STYLE="position:relative; TOP:0px; LEFT:0px" width="165"
   SRC="Dia3_b.png">
 </div>
+<br>
+<div  padding-bottom: 50px;></div>
 
-<div class="scrollmenu">
-  <p>
-  <img src="panel_Dia3_1.png" id="panel" STYLE="position:relative;
-  TOP:0px; LEFT:10px;  border: 2px solid #000;">      
-  <img src="panel_Dia3_2.png" id="panel" STYLE="position:relative;
-  TOP:0px; LEFT:30px;  border: 2px solid #000;">     
-  <img src="panel_Dia3_3.png" id="panel" STYLE="position:relative;
-  TOP:0px; LEFT:50px; border: 2px solid #000;">
-  <img src="panel_Dia3_4.png" id="panel" STYLE="position:relative;
-  TOP:0px; LEFT:70px; border: 2px solid #000;">  
-  </p>
+<div class="diario-celu">
+<img src="panel-celu_Dia3_1.png"
+  id="panel"  style="border: 2px solid #000;  position:relative;
+  width:98%">
+</div>
+<div class="diario-celu">
+<img src="panel-celu_Dia3_2.png"
+  id="panel"  style="border: 2px solid #000;  position:relative; TOP:
+  8px; width:98%">
+</div>
+<div class="diario-celu">
+<img src="panel-celu_Dia3_3.png"
+  id="panel"  style="border: 2px solid #000;  position:relative; TOP:
+  16px; width:98%">
+</div>
+<div class="diario-celu">
+<img src="panel-celu_Dia3_4.png"
+  id="panel"  style="border: 2px solid #000;  position:relative; TOP:24px; width:98%">
 </div>
 
-
-<img id="MapaPrecipitacions_dia3" src="PP_d3.png" class="mapa">
+<div class="img">
+  <a href=><img src="panel_Dia3_1.png" id="panel"
+  style="border: 2px solid #000;  position:relative; TOP:px;"></a>
+  <p class="espacio"></p>
+  <a href=""><img src="panel_Dia3_2.png" id="panel"
+  style="border: 2px solid #000;  position:relative; TOP:px;"></a>
+    <p class="espacio"></p>
+  <a href=""><img src="panel_Dia3_3.png" id="panel""
+  style="border: 2px solid #000;  position:relative; TOP:px;"></a>
+    <p class="espacio"></p>
+ <a href=""><img src="panel_Dia3_4.png" id="panel"
+  style="border: 2px solid #000;  position:relative; TOP:px;"></a>   
+</div>
 
 <p></p>
 
-<button onclick="history.back()" class="buttonBg">< Volver</button>
+<p></p>
+
+<img id="MapaPrecipitacions_dia3" src="PP_d3.png" style="position: relative;
+TOP: 23px;" class="mapa">
+
+<p></p>
+
+<button onclick="history.back()"  style="position: relative;
+TOP: 24px;" class="buttonBg">< Volver</button>
 
 
 
-<div style="background-color: #AED6F1;">
-
-  
-  <p style="font-size:15px; margin-left: 10px;">
+<div style="font-size:12px; margin-left: 10px; text-align: justify;
+  text-justify: inter-word;">
 <br>
-  Excepto en el caso de lluvia/nieve, los &iacute;conos meteorol&oacute;gicos
-son del paquete "Weather Color" de Sihan Liu 
+
+<br>
+
+<br>
+
+
+
+  Excepto en el caso de lluvia/nieve y nevisca, los &iacute;conos meteorol&oacute;gicos
+son del paquete "Weather Color" de Sihan Liu
   (https://www.sihanliu.com/).  
-  En el caso del icono lluvia/nieve, el mismo ha sido realizado
-  a partir de dos &iacute;conos de ese mismo trabajo. </p>
+  En el caso de lluvia/nieve y nevisca, los mismos han sido realizado
+  a partir de &iacute;conos de ese mismo trabajo.
 <br>
-  
-</div>
+
+    <h2>Descargo de Responsabilidad</h2>
+   
+           La información meteorológica presentada en esta
+   página web tienen fines exclusivamente informativos y no debe
+   considerarse para tomar decisiones significativas. Por lo tanto,
+            no asumimos
+   ninguna responsabilidad por las consecuencias de las acciones
+   tomadas en función de los pronósticos presentados en este sitio.
+   
+
+    </div>
+
+
 
 </body>
 
